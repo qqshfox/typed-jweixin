@@ -298,7 +298,7 @@ declare namespace Wechat {
          * 如果要返回直接给openLocation用的火星坐标,可传入'gcj02'
          */
         type?: string;
-        success?: (res: LocationResource) => void;
+        success?: (res?: LocationResource) => void;
     }
 
     interface MenuItemData extends WxParamBase {
@@ -408,7 +408,6 @@ declare namespace Wechat {
 
     interface WXAddressParam extends WxParamBase {
         success: (res?: WXAddressData) => void;
-        cancel: (res?) => void;
     }
 
     interface BeaconData extends WxParamBase {
